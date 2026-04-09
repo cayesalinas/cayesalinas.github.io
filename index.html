@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid #e0e0e0;
+            display: flex;
+            gap: 40px;
+            align-items: flex-start;
+        }
+
+        .profile-photo {
+            flex-shrink: 0;
+        }
+
+        .profile-photo img {
+            width: 200px;
+            height: 200px;
+            border-radius: 4px;
+            object-fit: cover;
+            border: 1px solid #e0e0e0;
+        }
+
+        .header-content {
+            flex: 1;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #222;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 15px;
+        }
+
+        .contact-info {
+            margin-top: 15px;
+            font-size: 0.95rem;
+        }
+
+        .contact-info a {
+            color: #0366d6;
+            text-decoration: none;
+            margin-right: 15px;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        nav {
+            margin: 30px 0;
+            padding: 15px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        nav a {
+            color: #0366d6;
+            text-decoration: none;
+            margin-right: 25px;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #222;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 8px;
+        }
+
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        .bio {
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        .paper {
+            margin-bottom: 25px;
+        }
+
+        .paper-title {
+            font-weight: 600;
+            color: #222;
+            margin-bottom: 5px;
+        }
+
+        .paper-authors {
+            font-size: 0.95rem;
+            color: #555;
+            margin-bottom: 5px;
+        }
+
+        .paper-venue {
+            font-size: 0.9rem;
+            color: #666;
+            font-style: italic;
+            margin-bottom: 8px;
+        }
+
+        .paper-links a {
+            color: #0366d6;
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-right: 12px;
+        }
+
+        .paper-links a:hover {
+            text-decoration: underline;
+        }
+
+        .project {
+            margin-bottom: 25px;
+        }
+
+        .project-title {
+            font-weight: 600;
+            color: #222;
+            margin-bottom: 5px;
+        }
+
+        .project-description {
+            font-size: 0.95rem;
+            color: #555;
+            margin-bottom: 8px;
+        }
+
+        .project-links a {
+            color: #0366d6;
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-right: 12px;
+        }
+
+        .project-links a:hover {
+            text-decoration: underline;
+        }
+
+        .course {
+            margin-bottom: 20px;
+        }
+
+        .course-info {
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 15px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .news {
+            background: #f6f8fa;
+            border-left: 3px solid #0366d6;
+            padding: 15px 20px;
+            margin-bottom: 20px;
+        }
+
+        .news-item {
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+        }
+
+        .news-date {
+            color: #666;
+            font-weight: 600;
+            margin-right: 10px;
+        }
+
+        footer {
+            margin-top: 60px;
+            padding-top: 20px;
+            border-top: 1px solid #e0e0e0;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #666;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 20px 15px;
+            }
+
+            header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            .profile-photo img {
+                width: 150px;
+                height: 150px;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            nav a {
+                display: block;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="profile-photo">
+            <img src="profile.jpg" alt="Your Name">
+        </div>
+        <div class="header-content">
+            <h1>Your Name</h1>
+            <div class="subtitle">Ph.D. Student / Postdoc / Assistant Professor</div>
+            <div class="subtitle">Department of Computer Science, University Name</div>
+            <div class="contact-info">
+                <a href="mailto:yourname@university.edu">yourname@university.edu</a>
+                <a href="https://github.com/yourusername">GitHub</a>
+                <a href="https://scholar.google.com/citations?user=XXX">Google Scholar</a>
+                <a href="https://linkedin.com/in/yourname">LinkedIn</a>
+                <a href="cv.pdf">CV (PDF)</a>
+            </div>
+        </div>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#publications">Publications</a>
+        <a href="#projects">Projects</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#news">News</a>
+    </nav>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="bio">
+            <p>
+                I am a [Ph.D. student/Postdoc/Assistant Professor] in the Department of Computer Science at [University Name], advised by [Advisor Name]. My research focuses on [your research area, e.g., machine learning, systems, HCI, theory, etc.].
+            </p>
+            <p>
+                Broadly, I'm interested in [describe your research interests in 2-3 sentences. Be specific about the problems you work on and why they matter].
+            </p>
+            <p>
+                Before joining [University], I received my [B.S./M.S.] in [Major] from [Previous University] in [Year]. I have also spent time at [Company/Lab] working on [brief description of work].
+            </p>
+        </div>
+    </section>
+
+    <section id="news">
+        <h2>News</h2>
+        <div class="news">
+            <div class="news-item">
+                <span class="news-date">[Apr 2024]</span>
+                Paper accepted to [Conference Name]!
+            </div>
+            <div class="news-item">
+                <span class="news-date">[Mar 2024]</span>
+                Started internship at [Company Name].
+            </div>
+            <div class="news-item">
+                <span class="news-date">[Jan 2024]</span>
+                Gave a talk at [Event/Seminar Name].
+            </div>
+            <div class="news-item">
+                <span class="news-date">[Dec 2023]</span>
+                Received [Award/Fellowship Name].
+            </div>
+        </div>
+    </section>
+
+    <section id="publications">
+        <h2>Publications</h2>
+        
+        <div class="paper">
+            <div class="paper-title">
+                Your Paper Title Here: A Compelling Description of Your Research
+            </div>
+            <div class="paper-authors">
+                <strong>Your Name</strong>, Coauthor One, Coauthor Two, Senior Author
+            </div>
+            <div class="paper-venue">
+                Conference Name (ConferenceName '24), 2024
+            </div>
+            <div class="paper-links">
+                <a href="#">[PDF]</a>
+                <a href="#">[arXiv]</a>
+                <a href="#">[Code]</a>
+                <a href="#">[Slides]</a>
+            </div>
+        </div>
+
+        <div class="paper">
+            <div class="paper-title">
+                Another Important Paper: Solving Another Challenging Problem
+            </div>
+            <div class="paper-authors">
+                Coauthor One, <strong>Your Name</strong>, Coauthor Two
+            </div>
+            <div class="paper-venue">
+                Journal Name, Vol. X, No. Y, 2023
+            </div>
+            <div class="paper-links">
+                <a href="#">[PDF]</a>
+                <a href="#">[DOI]</a>
+                <a href="#">[Code]</a>
+            </div>
+        </div>
+
+        <div class="paper">
+            <div class="paper-title">
+                Previous Work: Foundation for Your Current Research
+            </div>
+            <div class="paper-authors">
+                <strong>Your Name</strong>, Advisor Name
+            </div>
+            <div class="paper-venue">
+                Workshop at Major Conference (Workshop '23), 2023
+            </div>
+            <div class="paper-links">
+                <a href="#">[PDF]</a>
+                <a href="#">[Poster]</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+
+        <div class="project">
+            <div class="project-title">Project Name One</div>
+            <div class="project-description">
+                Brief description of the project, what problem it solves, and key technologies used. This could be open-source software, research prototypes, or tools you've built.
+            </div>
+            <div class="project-links">
+                <a href="#">[GitHub]</a>
+                <a href="#">[Demo]</a>
+                <a href="#">[Documentation]</a>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="project-title">Project Name Two</div>
+            <div class="project-description">
+                Another project showcasing different skills or research directions. Mention if it's widely used, has contributors, or has been deployed in practice.
+            </div>
+            <div class="project-links">
+                <a href="#">[GitHub]</a>
+                <a href="#">[Paper]</a>
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="project-title">Project Name Three</div>
+            <div class="project-description">
+                A third project demonstrating breadth of interests. Could include course projects, hackathon winners, or side projects that turned into something bigger.
+            </div>
+            <div class="project-links">
+                <a href="#">[GitHub]</a>
+                <a href="#">[Website]</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="teaching">
+        <h2>Teaching</h2>
+
+        <div class="course">
+            <h3>CS XXX: Course Name (Semester Year)</h3>
+            <div class="course-info">
+                Role: Teaching Assistant / Instructor / Guest Lecturer
+            </div>
+            <div class="course-info">
+                Brief description of what you taught, responsibilities, or notable achievements (e.g., "Redesigned labs" or "Highest evaluation scores").
+            </div>
+        </div>
+
+        <div class="course">
+            <h3>CS YYY: Another Course Name (Semester Year)</h3>
+            <div class="course-info">
+                Role: Teaching Assistant
+            </div>
+            <div class="course-info">
+                Description of your role and contributions to the course.
+            </div>
+        </div>
+
+        <div class="course">
+            <h3>Mentoring</h3>
+            <div class="course-info">
+                I have mentored [X] undergraduate students on research projects in [research areas]. 
+                [Optional: List names if students have given permission, or mention outcomes like papers published, presentations given, etc.]
+            </div>
+        </div>
+    </section>
+
+    <section id="service">
+        <h2>Service</h2>
+        <ul>
+            <li><strong>Reviewer:</strong> Conference Name 2024, Journal Name 2023-2024</li>
+            <li><strong>Organizer:</strong> Workshop on [Topic] at Conference Name 2024</li>
+            <li><strong>Student Volunteer:</strong> Conference Name 2023</li>
+            <li><strong>Departmental Service:</strong> Graduate Student Association, Outreach Committee</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>Last updated: April 2024</p>
+        <p>&copy; 2024 Your Name</p>
+    </footer>
+</body>
+</html>
